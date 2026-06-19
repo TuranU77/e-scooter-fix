@@ -207,7 +207,6 @@ function openModal(mode = "sendin") {
   modal.hidden = false;
   document.body.classList.add("modal-open");
   updateSummary();
-  form?.querySelector("input, select, textarea")?.focus();
 }
 
 function closeModal() {
@@ -254,7 +253,6 @@ priceStatus?.addEventListener("click", (event) => {
   if (actionButton.dataset.priceAction === "sendin") {
     setFormMode("sendin");
     updateSummary();
-    form?.querySelector("[data-sendin-step] select")?.focus();
   }
   if (actionButton.dataset.priceAction === "location") {
     closeModal();
